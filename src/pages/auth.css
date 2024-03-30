@@ -1,0 +1,24 @@
+body {
+  background-color: black;
+  color: rgb(205, 205, 205);
+}
+.logo {
+  width: 20vh;
+}
+.navbar {
+  @apply w-full  z-10 absolute;
+}
+.main {
+  @apply w-full  m-auto flex flex-col items-center justify-center absolute mx-auto h-screen;
+  z-index: -1;
+}
+.m-1 {
+  @apply text-4xl   w-auto;
+  color: rgb(201, 169, 7);
+}
+.m-2 {
+  @apply w-auto;
+}
+.m-3 {
+  @apply text-xl;
+}
