@@ -6,11 +6,10 @@ body {
   width: 20vh;
 }
 .navbar {
-  @apply w-full  z-10 absolute;
+  @apply w-full;
 }
 .main {
-  @apply w-full  m-auto flex flex-col items-center justify-center absolute mx-auto h-screen;
-  z-index: -1;
+  @apply w-full my-44 m-auto flex flex-col items-center justify-center  mx-auto h-fit;
 }
 .m-1 {
   @apply text-4xl   w-auto;
