@@ -21,11 +21,13 @@ const Auth = () => {
         <Authbutton
           logo={<FaGoogle />}
           text={"SignUp with Google"}
+          label={"GoogleAuth"}
           mark={<MdArrowForwardIos />}
         />
         <Authbutton
           logo={<FaGithub />}
           text={"SignUp with Github"}
+          label={"GithubAuth"}
           mark={<MdArrowForwardIos />}
         />
       </div>
