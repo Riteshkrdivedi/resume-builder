@@ -1,16 +1,29 @@
 import React from "react";
+import {
+  GoogleAuthProvider,
+  GithubAuthProvider,
+  signInWithRedirect,
+} from "firebase/auth";
+import { auth } from "../config/firebase.config";
 
 const Authbutton = ({ logo, text, mark, label }) => {
-  const GoogleAuth = new GoogleAuth();
-  const GithubAuth = new GithubAuth();
+  const GoogleAuth = new GoogleAuthProvider();
+  const GithubAuth = new GithubAuthProvider();
 
   const provider = async () => {
     switch (label) {
-      case "GoogleAuth":
-        console.log("google ke andar");
+      case "GoogleAuthProvider":
+        await signInWithRedirect(auth, GoogleAuth)
+          .then((result) => {
+            console.log(result);
+          })
+          .catch((err) => {
+            console.log("Error:${err.Message}");
+          });
         break;
-      case "GithubAuth":
-        console.log("github ke andar");
+
+      case "GithubAuthaProvider":
+        console.log("git ke nadar");
         break;
 
       default:

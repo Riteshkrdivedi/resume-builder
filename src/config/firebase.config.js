@@ -5,13 +5,13 @@ import { getAuth } from "firebase/auth";
 import { firestore, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCCBRYNSdb5uTrLaaLITvQMZ2u5MlIdAuc",
-  authDomain: "resume-builder-2k24.firebaseapp.com",
-  projectId: "resume-builder-2k24",
-  storageBucket: "resume-builder-2k24.appspot.com",
-  messagingSenderId: "642177877300",
-  appId: "1:642177877300:web:a8c05d232bd0ba8fa51161",
-  measurementId: "G-B6G5DMCS9Y",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_API_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
@@ -20,4 +20,4 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-export { auth, db };
+export { auth, db, analytics };
