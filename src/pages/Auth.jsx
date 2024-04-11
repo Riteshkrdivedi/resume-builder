@@ -27,7 +27,7 @@ const Auth = () => {
         <Authbutton
           logo={<FaGithub />}
           text={"SignUp with Github"}
-          label={"GithubAuthaProvider"}
+          label={"GithubAuthProvider"}
           mark={<MdArrowForwardIos />}
         />
       </div>

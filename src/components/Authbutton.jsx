@@ -22,12 +22,24 @@ const Authbutton = ({ logo, text, mark, label }) => {
           });
         break;
 
-      case "GithubAuthaProvider":
-        console.log("git ke nadar");
+      case "GithubAuthProvider":
+        await signInWithRedirect(auth, GithubAuth)
+          .then((result) => {
+            console.log(result);
+          })
+          .catch((err) => {
+            console.log("Error:${err.Message}");
+          });
         break;
 
       default:
-        console.log("google ke andar");
+        await signInWithRedirect(auth, GoogleAuth)
+          .then((result) => {
+            console.log(result);
+          })
+          .catch((err) => {
+            console.log("Error:${err.Message}");
+          });
     }
   };
   return (
